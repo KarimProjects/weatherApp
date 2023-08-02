@@ -1,19 +1,19 @@
 async function getCurrentWeather(location) {
   const fetchData = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=1f6f03a427f44898ae362916233107&q=${location}`
+    `https://api.weatherapi.com/v1/current.json?key=1f6f03a427f44898ae362916233107&q=${location}`
   );
   const jsonData = await fetchData.json();
   return jsonData;
 }
 async function get3days(location) {
-  const fetchData = await fetch(`http://api.weatherapi.com/v1/forecast.json?
+  const fetchData = await fetch(`https://api.weatherapi.com/v1/forecast.json?
 key=1f6f03a427f44898ae362916233107&q=${location}&days=3`);
   const jsonData = await fetchData.json();
   return jsonData;
 }
 async function searchCity(location) {
   const fetchData = await fetch(
-    `http://api.weatherapi.com/v1/search.json?key=1f6f03a427f44898ae362916233107&q=${location}`
+    `https://api.weatherapi.com/v1/search.json?key=1f6f03a427f44898ae362916233107&q=${location}`
   );
   const jsonData = await fetchData.json();
   return jsonData;
